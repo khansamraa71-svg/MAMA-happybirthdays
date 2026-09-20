@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Mama 💜</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="stars"></div>
+
+
+    <!-- NAVBAR -->
+    <nav>
+
+        <div class="logo">
+            For Mama 💜
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+            <a href="wish.html">
+                Wish
+            </a>
+
+            <a href="memories.html">
+                Memories
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HOME PAGE -->
+    <main class="home">
+
+        <div class="home-content">
+
+
+            <!-- SMALL HEADING -->
+            <p class="small-text">
+                A SPECIAL DAY FOR A SPECIAL PERSON
+            </p>
+
+
+            <!-- MAIN HEADING -->
+            <h1>
+                Happy Birthday
+            </h1>
+
+
+            <!-- SUB HEADING -->
+            <h2>
+                My Beautiful Mama 💜
+            </h2>
+
+
+            <!-- INTRO -->
+            <p class="intro">
+                Today is all about celebrating the most amazing woman.
+                May your day be filled with happiness, love and countless smiles.
+            </p>
+
+
+
+            <!-- =========================
+                 CAKE
+            ========================== -->
+
+            <div class="cake-area">
+
+
+                <!-- CANDLES -->
+
+                <div class="candles">
+
+
+                    <div class="candle">
+
+                        <span class="flame"></span>
+
+                    </div>
+
+
+                    <div class="candle">
+
+                        <span class="flame"></span>
+
+                    </div>
+
+
+                    <div class="candle">
+
+                        <span class="flame"></span>
+
+                    </div>
+
+
+                    <div class="candle">
+
+                        <span class="flame"></span>
+
+                    </div>
+
+
+                    <div class="candle">
+
+                        <span class="flame"></span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- CAKE -->
+
+                <div class="cake">
+
+
+                    <!-- CAKE TOP -->
+                    <div class="cake-top"></div>
+
+
+                    <!-- CREAM -->
+                    <div class="cream"></div>
+
+
+                    <!-- CAKE BODY -->
+                    <div class="cake-body">
+
+
+                        <div class="cake-hearts">
+
+                            <span>💜</span>
+
+                            <span>♡</span>
+
+                            <span>💜</span>
+
+                            <span>♡</span>
+
+                            <span>💜</span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- PLATE -->
+                    <div class="plate"></div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BUTTONS
+            ========================== -->
+
+            <div class="home-buttons">
+
+
+                <!-- CUT CAKE -->
+                <button
+                    type="button"
+                    class="cut-btn"
+                    onclick="cutCake()">
+
+                    ✨ Cut The Cake
+
+                </button>
+
+
+                <!-- NEXT -->
+                <a
+                    href="wish.html"
+                    class="next-btn">
+
+                    Next → 💜
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <p
+                id="message"
+                class="message">
+
+                Make a wish, Mama! 🎂💜
+
+            </p>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function cutCake() {
+
+
+            /* MESSAGE */
+
+            const message =
+                document.getElementById("message");
+
+
+            message.textContent =
+                "🎉 Cake Cut! Happy Birthday, My Queen! 👑💜";
+
+
+
+            /* FALLING HEARTS */
+
+            for (let i = 0; i < 35; i++) {
+
+
+                const heart =
+                    document.createElement("div");
+
+
+                /* CLASS */
+
+                heart.className =
+                    "floating-heart";
+
+
+                /* RANDOM EMOJI */
+
+                heart.textContent =
+                    Math.random() > 0.45
+                        ? "💜"
+                        : "✨";
+
+
+                /* RANDOM HORIZONTAL POSITION */
+
+                heart.style.left =
+                    Math.random() * 100 + "vw";
+
+
+                /* RANDOM FALL SPEED */
+
+                heart.style.animationDuration =
+                    (2 + Math.random() * 3) + "s";
+
+
+                /* RANDOM DELAY */
+
+                heart.style.animationDelay =
+                    Math.random() * 1.5 + "s";
+
+
+                /* RANDOM SIZE */
+
+                heart.style.fontSize =
+                    (16 + Math.random() * 16) + "px";
+
+
+                /* ADD TO PAGE */
+
+                document.body.appendChild(heart);
+
+
+
+                /* REMOVE AFTER ANIMATION */
+
+                setTimeout(function () {
+
+                    heart.remove();
+
+                }, 6500);
+
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,1027 @@
+
+/* =========================================
+   GOOGLE FONTS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #210b35 0%, #09050d 45%, #030205 100%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND STARS
+========================================= */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.45;
+
+    background-image:
+        radial-gradient(#ffffff 1px, transparent 1px),
+        radial-gradient(#c879ff 1px, transparent 1px);
+
+    background-size: 70px 70px, 110px 110px;
+
+    background-position: 0 0, 35px 45px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav {
+    width: 100%;
+    min-height: 70px;
+
+    padding: 15px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(180, 90, 255, 0.18);
+
+    background: rgba(5, 3, 8, 0.75);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.logo {
+    color: #d18aff;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d18aff;
+}
+
+
+/* =========================================
+   COMMON
+========================================= */
+
+.small-text {
+    color: #c681ff;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    font-weight: 500;
+}
+
+
+.next-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 24px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid #9143c5;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.next-btn:hover {
+    transform: translateY(-3px);
+
+    background: rgba(150, 55, 220, 0.18);
+
+    box-shadow:
+        0 0 25px rgba(170, 70, 255, 0.35);
+}
+
+
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home {
+    min-height: calc(100vh - 70px);
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+
+.home-content {
+    width: 100%;
+    max-width: 850px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.home h1 {
+    margin-top: 5px;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(60px, 9vw, 95px);
+
+    line-height: 1;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #c879ff,
+        #ffffff
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.home h2 {
+    margin-top: 8px;
+
+    color: #d9b6f5;
+
+    font-size: clamp(20px, 3vw, 30px);
+
+    font-weight: 500;
+}
+
+
+.intro {
+    max-width: 570px;
+
+    margin-top: 12px;
+
+    color: #999;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CAKE AREA
+========================================= */
+
+.cake-area {
+    position: relative;
+
+    width: 280px;
+    height: 220px;
+
+    margin-top: 12px;
+}
+
+
+/* CAKE */
+
+.cake {
+    position: absolute;
+
+    width: 200px;
+    height: 120px;
+
+    left: 50%;
+    bottom: 15px;
+
+    transform: translateX(-50%);
+}
+
+
+/* CAKE BODY */
+
+.cake-body {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 200px;
+    height: 80px;
+
+    border-radius: 8px 8px 18px 18px;
+
+    background: linear-gradient(
+        90deg,
+        #4c196d,
+        #a344d4,
+        #632184
+    );
+
+    border: 2px solid #bd6cf2;
+
+    box-shadow:
+        0 0 25px rgba(168, 70, 230, 0.35);
+}
+
+
+/* CAKE TOP */
+
+.cake-top {
+    position: absolute;
+
+    width: 200px;
+    height: 32px;
+
+    left: 0;
+    top: 22px;
+
+    background: #ead8f5;
+
+    border-radius: 50%;
+
+    z-index: 2;
+}
+
+
+/* CREAM */
+
+.cream {
+    position: absolute;
+
+    width: 175px;
+    height: 20px;
+
+    left: 12px;
+    top: 34px;
+
+    background: white;
+
+    border-radius: 0 0 20px 20px;
+
+    z-index: 4;
+}
+
+
+/* HEARTS */
+
+.cake-hearts {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 22px;
+
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 19px;
+}
+
+
+/* PLATE */
+
+.plate {
+    position: absolute;
+
+    width: 235px;
+    height: 17px;
+
+    left: -17px;
+    bottom: -9px;
+
+    background: #120b17;
+
+    border: 2px solid #9143c5;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   CANDLES
+========================================= */
+
+.candles {
+    position: absolute;
+
+    width: 100%;
+
+    left: 0;
+    top: 35px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 5px;
+
+    z-index: 10;
+}
+
+
+.candle {
+    position: relative;
+
+    width: 14px;
+    height: 52px;
+
+    border-radius: 4px;
+
+    background: repeating-linear-gradient(
+        45deg,
+        #a43ee8 0px,
+        #a43ee8 6px,
+        #ead8ff 6px,
+        #ead8ff 12px
+    );
+}
+
+
+/* FLAME */
+
+.flame {
+    position: absolute;
+
+    width: 13px;
+    height: 19px;
+
+    left: 1px;
+    top: -20px;
+
+    background: #ffd34e;
+
+    border-radius: 50% 50% 50% 0;
+
+    transform: rotate(-45deg);
+
+    box-shadow:
+        0 0 8px #ffb300,
+        0 0 18px #ff8c00;
+
+    animation: flame 0.7s infinite alternate;
+}
+
+
+@keyframes flame {
+
+    from {
+        transform: rotate(-45deg) scale(0.9);
+    }
+
+    to {
+        transform: rotate(-45deg) scale(1.08);
+    }
+}
+
+
+/* =========================================
+   HOME BUTTONS
+========================================= */
+
+.home-buttons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.cut-btn {
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #642095,
+        #a844e9
+    );
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 22px rgba(168, 68, 233, 0.3);
+}
+
+
+.cut-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 30px rgba(175, 75, 255, 0.5);
+}
+
+
+.message {
+    min-height: 22px;
+
+    margin-top: 8px;
+
+    color: #c889ff;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   WISH PAGE
+========================================= */
+
+.wish-page {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 15px;
+}
+
+
+.wish-card {
+    width: 100%;
+    max-width: 720px;
+
+    padding: 45px 50px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(49, 18, 70, 0.8),
+            rgba(12, 7, 17, 0.9)
+        );
+
+    border: 1px solid rgba(190, 100, 255, 0.3);
+
+    box-shadow:
+        0 0 45px rgba(150, 55, 220, 0.16);
+}
+
+
+.crown {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.wish-small {
+    color: #bd78ff;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+.wish-card h1 {
+    margin-top: 8px;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(50px, 8vw, 75px);
+
+    color: #d18aff;
+}
+
+
+.wish-card h2 {
+    margin-top: 5px;
+
+    color: #eee;
+
+    font-size: 20px;
+
+    font-weight: 500;
+}
+
+
+.wish-line {
+    width: 80px;
+    height: 2px;
+
+    margin: 22px auto;
+
+    background: #a844e9;
+
+    box-shadow:
+        0 0 10px #a844e9;
+}
+
+
+.wish-card > p {
+    color: #c4c4c4;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-top: 14px;
+}
+
+
+.dua-box {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: rgba(150, 60, 220, 0.08);
+
+    border: 1px solid rgba(170, 80, 240, 0.2);
+}
+
+
+.dua-box span {
+    font-size: 28px;
+}
+
+
+.dua-box p {
+    margin-top: 8px;
+
+    color: #d4b8e8;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+.signature {
+    margin-top: 25px !important;
+
+    color: #c889ff !important;
+
+    font-weight: 500;
+}
+
+
+.wish-next {
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   MEMORIES PAGE
+========================================= */
+
+.memories-page {
+    min-height: calc(100vh - 70px);
+
+    padding: 45px 20px;
+}
+
+
+.memories-content {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.memories-content h1 {
+    margin-top: 8px;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(55px, 8vw, 80px);
+
+    color: #d18aff;
+}
+
+
+.memory-intro {
+    margin-top: 5px;
+
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+.memory-grid {
+    width: 100%;
+
+    margin-top: 35px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.memory-card {
+    height: 260px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(190, 100, 255, 0.3);
+
+    background: #100917;
+
+    box-shadow:
+        0 0 20px rgba(160, 60, 220, 0.12);
+
+    transition: 0.35s;
+}
+
+
+.memory-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 0 30px rgba(170, 70, 240, 0.3);
+}
+
+
+.memory-card img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+
+.memory-card:hover img {
+    transform: scale(1.05);
+}
+
+
+.back-home {
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .memory-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    nav {
+        min-height: auto;
+
+        padding: 13px 12px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .logo {
+        font-size: 17px;
+    }
+
+
+    .nav-links {
+        gap: 17px;
+    }
+
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+
+    .home {
+        min-height: calc(100vh - 95px);
+
+        padding: 25px 12px;
+
+        align-items: flex-start;
+    }
+
+
+    .home-content {
+        padding-top: 10px;
+    }
+
+
+    .small-text {
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .home h1 {
+        font-size: 57px;
+
+        margin-top: 6px;
+    }
+
+
+    .home h2 {
+        font-size: 19px;
+    }
+
+
+    .intro {
+        max-width: 330px;
+
+        margin-top: 8px;
+
+        font-size: 11px;
+
+        line-height: 1.6;
+    }
+
+
+    .cake-area {
+        width: 270px;
+
+        height: 205px;
+
+        margin-top: 4px;
+
+        transform: scale(0.88);
+    }
+
+
+    .home-buttons {
+        gap: 8px;
+
+        margin-top: -10px;
+    }
+
+
+    .cut-btn,
+    .next-btn {
+        padding: 10px 18px;
+
+        font-size: 11px;
+    }
+
+
+    .message {
+        font-size: 11px;
+    }
+
+
+    /* WISH MOBILE */
+
+    .wish-page {
+        padding: 25px 12px;
+
+        align-items: flex-start;
+    }
+
+
+    .wish-card {
+        padding: 30px 20px;
+    }
+
+
+    .crown {
+        font-size: 38px;
+    }
+
+
+    .wish-card h1 {
+        font-size: 53px;
+    }
+
+
+    .wish-card h2 {
+        font-size: 17px;
+
+        line-height: 1.5;
+    }
+
+
+    .wish-card > p {
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    .dua-box {
+        padding: 16px;
+    }
+
+
+    .dua-box p {
+        font-size: 11px;
+    }
+
+
+    /* MEMORIES MOBILE */
+
+    .memories-page {
+        padding: 30px 12px;
+    }
+
+
+    .memories-content h1 {
+        font-size: 55px;
+    }
+
+
+    .memory-intro {
+        font-size: 11px;
+    }
+
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 25px;
+    }
+
+
+    .memory-card {
+        height: 260px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL HEIGHT PHONES
+========================================= */
+
+@media (max-width: 600px) and (max-height: 700px) {
+
+    .home {
+        padding-top: 15px;
+    }
+
+
+    .home-content {
+        padding-top: 0;
+    }
+
+
+    .home h1 {
+        font-size: 50px;
+    }
+
+
+    .home h2 {
+        font-size: 17px;
+    }
+
+
+    .intro {
+        display: none;
+    }
+
+
+    .cake-area {
+        transform: scale(0.76);
+
+        margin-top: 0;
+
+        margin-bottom: -35px;
+    }
+
+}
+
+/* =========================================
+   FALLING HEARTS / CELEBRATION
+========================================= */
+
+.floating-heart {
+    position: fixed;
+
+    top: -40px;
+
+    font-size: 24px;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    animation-name: fallDown;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fallDown {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
